@@ -10,7 +10,7 @@ var conteudo = `
     <p>Uau, já temos conteúdo em HTML</p>
     <p>Nome: ${nomeDoUsuario}</p>
     <p>Curso: ${curso}</p>
-
+    <img src='https://miro.medium.com/max/5120/1*mp91A9RzagntGGjBnwu4Yw.png' width='500' height='350'</img>
 `
 
 

@@ -1,0 +1,1 @@
+npm install html-pdf <- biblioteca node pdf

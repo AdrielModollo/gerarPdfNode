@@ -3,24 +3,21 @@ var ejs = require("ejs"); //instância biblioteca EJS, explicado funcionamento n
 
 var nomeDoUsuario = "Adriel Modollo";
 var curso = "Formação Node.js";
+var categoria = "NODE";
 
-var conteudo = `
-
-    <h1 style='color:red'>Opa, ta ficando bonitinho! </h1>
-    <hr>
-    <p>Uau, já temos conteúdo em HTML</p>
-    <p>Nome: ${nomeDoUsuario}</p>
-    <p>Curso: ${curso}</p>
-    <img src='https://miro.medium.com/max/5120/1*mp91A9RzagntGGjBnwu4Yw.png' width='500' height='350'</img>
-`
-
-
-
-pdf.create(conteudo,{}).toFile("./meuPdfLindao.pdf",(err, res) => {
-    /* verifica existência de erro ou sucesso */  
-    if(err){
-        console.log("ERRO ACONTECEU OOOH NÃO...");
+ejs.renderFile("./meuarquivo.ejs",{nome: nomeDoUsuario, curso: curso, categoria: categoria},(err, html) =>{
+     /* verifica existência de erro ou sucesso */  
+     if(err){
+        console.log("Algo errado por aqui...");
     } else {
-        console.log(res);
+        pdf.create(html,{}).toFile("./meuPdfLindao.pdf",(err, res) => {
+            /* verifica existência de erro ou sucesso */  
+            if(err){
+                console.log("ERRO ACONTECEU OOOH NÃO...");
+            } else {
+                console.log(res);
+            }
+        }) //Pega os dados recebido e gera o arquivo PDF no local definido
     }
-}) //Pega os dados recebido e gera o arquivo PDF no local definido
+})
+

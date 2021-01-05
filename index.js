@@ -1,4 +1,5 @@
 var pdf = require("html-pdf"); //cria variavel e instância com a biblioteca pdf
+var ejs = require("ejs"); //instância biblioteca EJS, explicado funcionamento no readme.md
 
 var nomeDoUsuario = "Adriel Modollo";
 var curso = "Formação Node.js";

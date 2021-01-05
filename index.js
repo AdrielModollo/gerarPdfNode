@@ -1,10 +1,15 @@
 var pdf = require("html-pdf"); //cria variavel e instância com a biblioteca pdf
 
+var nomeDoUsuario = "Adriel Modollo";
+var curso = "Formação Node.js";
+
 var conteudo = `
 
     <h1 style='color:red'>Opa, ta ficando bonitinho! </h1>
     <hr>
     <p>Uau, já temos conteúdo em HTML</p>
+    <p>Nome: ${nomeDoUsuario}</p>
+    <p>Curso: ${curso}</p>
 
 `
 
